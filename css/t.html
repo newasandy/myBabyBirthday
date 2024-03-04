@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Button Visibility</title>
+</head>
+
+<body>
+
+    <audio src="../multimedia//Kodaline-The One.mp3" id="myAudio"></audio>
+
+    <button id="play" style="display:none;">Play</button><br />
+    <button id="pause" style="display:none;">Pause</button>
+
+    <script>
+        // Get the button element by its ID
+        const play = document.getElementById('play');
+        const pause = document.getElementById('pause');
+        const audioElement = document.getElementById('myAudio');
+
+
+        if (!audioElement.play()) {
+
+            // Toggle the visibility based on the current state
+            play.style.display = 'none';
+
+
+
+
+        } if (audioElement.play()) {
+
+            pause.style.display = 'none';
+
+
+
+            // Toggle the visibility based on the current state
+        }
+
+        const playFunction = () => {
+            audioElement.play();
+            play.style.display = 'block';
+        };
+        const pauseFunction = () => {
+            audioElement.pause();
+            pause.style.display = 'block';
+        };
+
+
+        // Call the toggleVisibility function when playFunction button is clicked
+        play.addEventListener('click', playFunction);
+        pause.addEventListener('click', pauseFunction);
+    </script>
+
+</body>
+
+</html>
